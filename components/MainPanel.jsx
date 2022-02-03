@@ -3,11 +3,17 @@ import React from "react";
 import Image from "next/image";
 import csgo_logo from "../media/csgo_logo.png";
 import moment from "moment";
+import { useRouter } from "next/router";
 
-function MainPanel() {
+function MainPanel({className, src}) {
+  const router = useRouter();
+
   return (
-    <div className="z-30 fixed bottom-0 left-0 w-full">
-      <iframe className="top-[59px] left-4 sm:left-10  relative" src="https://giffiles.alphacoders.com/315/315.gif"></iframe>
+    <div className="fixed z-50 bottom-0 left-0 w-full">
+      <iframe
+        className={className}
+        src={src}
+      ></iframe>
       <div className="h-12 w-full bg-black flex items-center justify-between">
         <div className="hover:bg-[#2c2e31] h-full flex items-center w-12 justify-center">
           <Image
@@ -20,7 +26,10 @@ function MainPanel() {
           />
         </div>
         <div className="h-full flex items-center">
-          <div className="flex justify-center w-12 h-full relative hover:bg-[#2c2e31] mainpanel">
+          <div
+            onClick={() => router.push("/vscode")}
+            className="flex justify-center w-12 h-full relative hover:bg-[#2c2e31] mainpanel"
+          >
             <Image
               src={
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
@@ -55,7 +64,7 @@ function MainPanel() {
           </div>
         </div>
         <div className="text-white text-xs h-full flex items-center hover:bg-[#2c2e31]">
-          <div className="flex flex-col px-4 space-y-1 items-center">
+          <div className="flex flex-col px-4 space-y-1 items-center cursor-default">
             <div>{moment().format("LT")}</div>
             <div>{moment().format("l")}</div>
           </div>

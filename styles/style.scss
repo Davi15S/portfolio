@@ -13,3 +13,36 @@
         width: 100%;
     }
 }
+
+.vscodeFolder,
+.vscodeSearch {
+    &::after{
+        height: 60%;
+        left: 45px;
+        width: 100px;
+        position: absolute;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: smaller;
+        background-color: #1e1e1e;
+        transform: scale(0);
+    }
+
+    &:hover::after {
+        transform: scale(1);
+    }
+}
+
+.vscodeFolder {
+    &::after {
+        content: "Explorer";
+    }
+}
+
+.vscodeSearch {
+    &::after {
+        content: "GitHub";
+    }
+}
