@@ -1,12 +1,18 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Desktop() {
+  useEffect(() => {
+    Aos.init({ duration: 750 });
+  });
+
   return (
     <div>
       <div className="bg-desktop fixed h-full w-full bg-center object-cover bg-no-repeat scale-150 blur-sm brightness-50" />
-      <div className="flex flex-col items-center max-w-screen-2xl mx-auto p-20 lg:flex-row justify-center lg:space-x-24 lg:mt-10">
+      <div data-aos="fade-up" className="flex flex-col items-center max-w-screen-2xl mx-auto px-14 pt-14 pb-20 lg:flex-row justify-center lg:space-x-24 lg:mt-10">
         <div className="text-white z-10 text-lg flex flex-col space-y-5 costum font-desktop lg:text-2xl">
           <p>
             Welcome to my portfolio. My name is David Nguyen. I am 18 years old
@@ -17,9 +23,13 @@ function Desktop() {
             as a main Javascript library.
           </p>
           <p>
-            There are a lot of thinks that i love...<br/> food, music and movies. As
-            you can guess from the desktop wallpaper, my favorite animated
-            series is <span className="font-bold italic text-2xl lg:text-3xl">Naruto</span>.
+            There are a lot of thinks that i love...
+            <br /> food, music and movies. As you can guess from the desktop
+            wallpaper, my favorite animated series is{" "}
+            <span className="font-bold italic text-2xl lg:text-3xl">
+              Naruto
+            </span>
+            .
           </p>
         </div>
         <div className="mt-16 mx-auto min-w-fit lg:mt-0">

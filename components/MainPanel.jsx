@@ -7,6 +7,7 @@ import moment from "moment";
 function MainPanel() {
   return (
     <div className="z-30 fixed bottom-0 left-0 w-full">
+      <iframe className="top-[59px] left-4 sm:left-10  relative" src="https://giffiles.alphacoders.com/315/315.gif"></iframe>
       <div className="h-12 w-full bg-black flex items-center justify-between">
         <div className="hover:bg-[#2c2e31] h-full flex items-center w-12 justify-center">
           <Image
