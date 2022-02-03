@@ -1,0 +1,15 @@
+.mainpanel {
+    &::after{
+        content: "";
+        top: 46px;
+        width: 85%;
+        bottom: 0;
+        position: absolute;
+        background-color: #838b96;
+        transition: width 100ms ease-in;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
