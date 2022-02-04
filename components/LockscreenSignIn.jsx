@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
 
-function LockscreenSignIn() {
+function LockscreenSignIn({push, text}) {
   const router = useRouter();
   const [count, setCount] = useState(0);
 
@@ -13,14 +13,14 @@ function LockscreenSignIn() {
     }, 1000);
 
     if(count === 3){
-        router.push("/desktop")
+        router.push(push)
     }
   }, [count]);
   return (
     <div>
-      <div className="bg-windows10_lockscreen fixed h-full w-full bg-center object-cover scale-105 blur-sm" />
+      <div className="bg-windows10_lockscreen fixed h-full w-full bg-center object-cover scale-105 blur-sm brightness-75" />
       <div className="text-white absolute mx-auto left-1/2 translate-x-[-50%] top-[50%] translate-y-[-50%] flex items-center flex-col space-y-6">
-        <div className="text-3xl font-light">Welcome...</div>
+        <div className="text-3xl font-light">{text}</div>
         <TailSpin color="white" height={50} width={50} />
       </div>
     </div>

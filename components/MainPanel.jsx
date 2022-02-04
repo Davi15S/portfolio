@@ -5,17 +5,16 @@ import csgo_logo from "../media/csgo_logo.png";
 import moment from "moment";
 import { useRouter } from "next/router";
 
-function MainPanel({className, src}) {
+function MainPanel({ push }) {
   const router = useRouter();
 
   return (
     <div className="fixed z-50 bottom-0 left-0 w-full">
-      <iframe
-        className={className}
-        src={src}
-      ></iframe>
       <div className="h-12 w-full bg-black flex items-center justify-between">
-        <div className="hover:bg-[#2c2e31] h-full flex items-center w-12 justify-center">
+        <div
+          onClick={() => router.push("lockscreenSignOut")}
+          className="hover:bg-[#2c2e31] h-full flex items-center w-12 justify-center"
+        >
           <Image
             src={
               "https://www.seekpng.com/png/full/26-264201_windows-10-logo-png-white-png-transparent-download.png"
@@ -27,7 +26,7 @@ function MainPanel({className, src}) {
         </div>
         <div className="h-full flex items-center">
           <div
-            onClick={() => router.push("/vscode")}
+            onClick={() => router.push(push)}
             className="flex justify-center w-12 h-full relative hover:bg-[#2c2e31] mainpanel"
           >
             <Image

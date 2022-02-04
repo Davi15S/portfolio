@@ -15,7 +15,9 @@ module.exports = {
     },
     fontFamily: {
       "desktop": ['Source Code Pro', 'monospace']
-    }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ]
 }

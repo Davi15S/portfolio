@@ -6,4 +6,8 @@
   body {
     @apply p-0 m-0 h-full
   }
+
+  .navbar{
+    @apply text-white relative h-8 bg-[#252526] flex items-center cursor-default overflow-scroll scrollbar-hide
+  }
 }

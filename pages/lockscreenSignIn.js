@@ -4,7 +4,7 @@ import LockscreenSignIn from '../components/LockscreenSignIn';
 
 function lockscreenSignIn() {
     return (
-        <LockscreenSignIn />
+        <LockscreenSignIn push={"/desktop"} text={"Welcome..."}/>
     );
 }
 

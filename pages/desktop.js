@@ -7,7 +7,7 @@ function desktop() {
     <div>
       <Desktop />
 
-      <MainPanel className={"top-[59px] left-4 sm:left-10 relative"} src={"https://giffiles.alphacoders.com/315/315.gif"}/>
+      <MainPanel push="/vscode"/>
     </div>
   );
 }
