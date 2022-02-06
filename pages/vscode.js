@@ -6,7 +6,7 @@ function vscode() {
   return (
     <div>
       <VSCode />
-      <MainPanel push="/desktop"/>
+      <MainPanel vscode="/desktop" chrome="/chrome" csgo="/csgo"/>
     </div>
   );
 }

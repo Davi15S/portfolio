@@ -14,35 +14,49 @@
     }
 }
 
-.vscodeFolder,
-.vscodeSearch {
-    &::after{
-        height: 60%;
-        left: 45px;
-        width: 100px;
-        position: absolute;
-        border-radius: 6px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: smaller;
-        background-color: #1e1e1e;
-        transform: scale(0);
-    }
+// .chrometab {
+//     &::after {
+//         content: "";
+//         top: 0;
+//         left: 100%;
+//         right: -10px;
+//         bottom: 0;
+//         position: absolute;
+//         background: pink;
+//         opacity: 50%;
+//     }
+// }
 
-    &:hover::after {
-        transform: scale(1);
-    }
-}
+// .vscodeFolder,
+// .vscodeSearch {
+//     &::after{
+//         height: 60%;
+//         left: 45px;
+//         width: 100px;
+//         position: absolute;
+//         border-radius: 6px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         font-size: smaller;
+//         background-color: #1e1e1e;
+//         transform: scale(0);
+//     }
 
-.vscodeFolder {
-    &::after {
-        content: "Explorer";
-    }
-}
+//     &:hover::after {
+//         transform: scale(1);
+//     }
+// }
 
-.vscodeSearch {
-    &::after {
-        content: "GitHub";
-    }
-}
+// .vscodeFolder {
+//     &::after {
+//         content: "Explorer";
+//     }
+// }
+
+// .vscodeSearch {
+//     &::after {
+//         content: "GitHub";
+//     }
+// }
+

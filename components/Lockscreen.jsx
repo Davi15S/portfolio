@@ -26,13 +26,18 @@ function Lockscreen() {
             }}
           />
         </div>
-        <div data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1000" className="text-sm sm:text-base">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="3000"
+          data-aos-duration="1000"
+          className="text-sm sm:text-base"
+        >
           For better experience press F11
         </div>
       </div>
       <div className="left-10 absolute bottom-44 sm:bottom-36 flex flex-col space-y-3 sm:left-16">
         <div className="text-white text-6xl font-light md:text-8xl">
-          {moment().format("HH:mm")}
+          {moment().format("LT")}
         </div>
         <div className="text-white flex text-2xl font-light md:text-4xl">
           <div>{moment().format("dddd")}</div>

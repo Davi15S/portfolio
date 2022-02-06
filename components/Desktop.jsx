@@ -7,7 +7,7 @@ import itachigif from "../media/itachi.gif";
 
 function Desktop() {
   useEffect(() => {
-    Aos.init({ duration: 750 });
+    Aos.init({ duration: 1200 });
   });
 
   return (

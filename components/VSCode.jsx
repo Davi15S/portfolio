@@ -5,11 +5,13 @@ import { XIcon, MinusIcon } from "@heroicons/react/solid";
 import {
   FolderIcon,
   ShareIcon,
-  MenuAlt1Icon,
   ChevronDownIcon,
+  ExclamationIcon,
+  XCircleIcon,
+  CheckIcon,
 } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import leegif from "../media/leegif.gif";
+import sasukevsnaruto from "../media/sasuke_naruto.gif";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -142,7 +144,7 @@ function VSCode() {
             width={15}
             objectFit="contain"
           />
-          <div className="text-[#e2b565] text-sm">contacts.css</div>
+          <div className="text-[#e2b565] text-sm">style.css</div>
         </div>
       </div>
 
@@ -155,8 +157,39 @@ function VSCode() {
         {txtIsActive && <Contacts isActive={isActive} />}
       </div>
 
-      <div className="fixed bottom-10 z-50 right-16">
-        <Image src={leegif} height={200} width={400} objectFit="contain" />
+      <div className="fixed bottom-16 z-50 right-16">
+        <Image
+          src={sasukevsnaruto}
+          height={200}
+          width={400}
+          objectFit="contain"
+        />
+      </div>
+
+      <div className="fixed h-6 bottom-12 bg-[#007acc] z-40 w-full text-white flex space-x-3 px-4 justify-between cursor-default">
+        <div className="flex items-center h-full space-x-3">
+          <div className="text-xs flex items-center h-full space-x-1 hover:bg-[#1f8ad2] px-2">
+            <ShareIcon className="h-4" />
+            <div>main</div>
+          </div>
+          <div className="flex h-full items-center text-xs space-x-1 hover:bg-[#1f8ad2] px-2">
+            <div className="flex h-full items-center">
+              <XCircleIcon className="h-4" />
+              <div>0</div>
+            </div>
+            <div className="flex h-full items-center">
+              <ExclamationIcon className="h-4" />
+              <div>0</div>
+            </div>
+          </div>
+        </div>
+        <div className="text-xs flex h-full items-center space-x-2">
+          <div className="hover:bg-[#1f8ad2] px-2 h-full flex items-center">Powered by Next.js</div>
+          <div className="flex h-full items-center hover:bg-[#1f8ad2] px-2">
+            <CheckIcon className="h-4" />
+            Prettier
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -184,10 +217,35 @@ function Contacts({ isActive }) {
               : "flex flex-col text-base pl-8"
           }
         >
-          <div>email: nguyenxd072@gmail.com</div>
-          <div>phone-number: +420 775 513 632</div>
-          <div>linkedin: www.linkedin.com/in/david-nguyen-5825a41b6/</div>
-          <div>github.com/Davi15S</div>
+          <div>
+            website: <span className="text-orange-300"></span>
+          </div>
+          <div>
+            email:{" "}
+            <span className="text-orange-300">nguyenxd072@gmail.com</span>
+          </div>
+          <div>
+            linkedin: <span className="text-orange-300">David Nguyen</span>
+          </div>
+          <div>
+            github: <span className="text-orange-300">Davi15S</span>
+          </div>
+        </div>
+        <div className="text-xl">{"}"}</div>
+      </div>
+      <div className="font-desktop text-gray-300 mt-10">
+        <div className="text-xl">{".skills {"}</div>
+        <div
+          className={
+            isActive
+              ? "flex flex-col text-base pl-8 whitespace-nowrap overflow-hidden"
+              : "flex flex-col text-base pl-8"
+          }
+        >
+          <div>html: </div>
+          <div>css: </div>
+          <div>react-nextjs: </div>
+          <div>c#: </div>
         </div>
         <div className="text-xl">{"}"}</div>
       </div>
@@ -297,7 +355,7 @@ function Explorer({ jsxIsActive, txtIsActive, fun }) {
             width={13}
             objectFit="contain"
           />
-          <div className="text-[#e2b565] text-sm">contacts.css</div>
+          <div className="text-[#e2b565] text-sm">style.css</div>
         </div>
       </div>
     </div>

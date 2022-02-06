@@ -5,11 +5,11 @@ import csgo_logo from "../media/csgo_logo.png";
 import moment from "moment";
 import { useRouter } from "next/router";
 
-function MainPanel({ push }) {
+function MainPanel({ vscode, chrome, csgo }) {
   const router = useRouter();
 
   return (
-    <div className="fixed z-50 bottom-0 left-0 w-full">
+    <div className="fixed z-30 bottom-0 left-0 w-full">
       <div className="h-12 w-full bg-black flex items-center justify-between">
         <div
           onClick={() => router.push("lockscreenSignOut")}
@@ -26,7 +26,7 @@ function MainPanel({ push }) {
         </div>
         <div className="h-full flex items-center">
           <div
-            onClick={() => router.push(push)}
+            onClick={() => router.push(vscode)}
             className="flex justify-center w-12 h-full relative hover:bg-[#2c2e31] mainpanel"
           >
             <Image
@@ -38,7 +38,10 @@ function MainPanel({ push }) {
               objectFit="contain"
             />
           </div>
-          <div className="flex justify-center w-12 h-full relative hover:bg-[#2c2e31] mainpanel">
+          <div
+            onClick={() => router.push(chrome)}
+            className="flex justify-center w-12 h-full relative hover:bg-[#2c2e31] mainpanel"
+          >
             <Image
               src={
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/2048px-Google_Chrome_icon_%28September_2014%29.svg.png"
@@ -58,7 +61,10 @@ function MainPanel({ push }) {
               objectFit="contain"
             />
           </div>
-          <div className="flex justify-center w-12 h-full relative hover:bg-[#2c2e31] mainpanel">
+          <div
+            onClick={() => router.push(csgo)}
+            className="flex justify-center w-12 h-full relative hover:bg-[#2c2e31] mainpanel"
+          >
             <Image src={csgo_logo} height={22} width={22} objectFit="contain" />
           </div>
         </div>

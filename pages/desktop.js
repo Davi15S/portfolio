@@ -7,7 +7,7 @@ function desktop() {
     <div>
       <Desktop />
 
-      <MainPanel push="/vscode"/>
+      <MainPanel vscode="/vscode" chrome="/chrome" csgo="/csgo"/>
     </div>
   );
 }
