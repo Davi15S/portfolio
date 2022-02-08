@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'windows10_lockscreen': "url('https://wallpaperaccess.com/full/437981.jpg')",
-        "desktop": "url('https://cdn.discordapp.com/attachments/930886737285247036/938542193453445120/desktop_wallpaper.png')"
+        "desktop": "url('https://cdn.discordapp.com/attachments/930886737285247036/938542193453445120/desktop_wallpaper.png')",
+        "nuke": "url('../media/nuke.gif')"
+
       },
       scale: {
         '130': '1.30',

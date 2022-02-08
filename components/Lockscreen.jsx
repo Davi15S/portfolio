@@ -17,7 +17,7 @@ function Lockscreen() {
 
   return (
     <div>
-      <div className="bg-windows10_lockscreen fixed h-full w-full bg-center scale-105 brightness-75"></div>
+      <div className="bg-windows10_lockscreen bg-cover fixed h-full w-full bg-center scale-105 brightness-75"/>
       <div className="px-10 absolute text-white font-desktop flex flex-col space-y-3 top-14 sm:px-16 sm:top-32">
         <div className="text-4xl sm:text-6xl">
           <TypewriterComponent
@@ -45,24 +45,27 @@ function Lockscreen() {
         </div>
       </div>
       <div
-        data-aos="fade-down"
+        data-aos="fade-in"
         data-aos-offset="-200"
         data-aos-delay="3000"
         data-aos-duration="1000"
-        onClick={() => router.push("/lockscreenSignIn")}
-        className="w-60 md:w-[20rem] h-24 bg-[#333435] hover:bg-[#3f3f3f] absolute bottom-5 right-6 cursor-pointer hover:scale-105 transition-all duration-200"
       >
-        <div className="top-3 left-5 absolute text-white flex flex-col space-y-3">
-          <div className="flex space-x-2 items-center">
-            <Image
-              src="https://pnggrid.com/wp-content/uploads/2021/05/Discord-Logo-Circle-1024x1024.png"
-              height={20}
-              width={20}
-              objectFit="contain"
-            />
-            <p>Discord</p>
+        <div
+          onClick={() => router.push("/lockscreenSignIn")}
+          className="w-60 md:w-[20rem] h-24 bg-[#333435] hover:bg-[#3f3f3f] hover:scale-105 transition-all duration-150 absolute bottom-5 right-6 cursor-pointer"
+        >
+          <div className="top-3 left-5 absolute text-white flex flex-col space-y-3">
+            <div className="flex space-x-2 items-center">
+              <Image
+                src="https://pnggrid.com/wp-content/uploads/2021/05/Discord-Logo-Circle-1024x1024.png"
+                height={20}
+                width={20}
+                objectFit="contain"
+              />
+              <p>Discord</p>
+            </div>
+            <p>Click here to continue...</p>
           </div>
-          <p>Click here to continue...</p>
         </div>
       </div>
     </div>

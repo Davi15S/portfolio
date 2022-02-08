@@ -12,7 +12,7 @@ function Desktop() {
 
   return (
     <div>
-      <div className="bg-desktop fixed h-full w-full bg-center object-cover bg-no-repeat scale-150 blur-sm brightness-50" />
+      <div className="bg-desktop bg-cover fixed h-full w-full bg-center object-cover bg-no-repeat scale-150 blur-sm brightness-50" />
       <div
         data-aos="fade-up"
         className="flex flex-col items-center max-w-screen-2xl mx-auto px-14 pt-14 pb-20 lg:flex-row justify-center lg:space-x-24 lg:mt-10"

@@ -184,7 +184,7 @@ function VSCode() {
           </div>
         </div>
         <div className="text-xs flex h-full items-center space-x-2">
-          <div className="hover:bg-[#1f8ad2] px-2 h-full flex items-center">Powered by Next.js</div>
+          <div className="hover:bg-[#1f8ad2] px-2 h-full flex items-center whitespace-nowrap">Powered by Next.js</div>
           <div className="flex h-full items-center hover:bg-[#1f8ad2] px-2">
             <CheckIcon className="h-4" />
             Prettier
@@ -204,8 +204,8 @@ function Contacts({ isActive }) {
       data-aos="fade-in"
       className={
         isActive
-          ? "text-white left-10 pt-10 relative sm:p-14"
-          : "text-white px-10 pt-10 relative sm:p-14"
+          ? "text-white left-5 pt-10 relative sm:p-14 sm:left-10"
+          : "text-white px-5 pt-10 relative sm:p-14 sm:px-10"
       }
     >
       <div className="font-desktop text-gray-300">
@@ -213,8 +213,8 @@ function Contacts({ isActive }) {
         <div
           className={
             isActive
-              ? "flex flex-col text-base pl-8 whitespace-nowrap overflow-hidden"
-              : "flex flex-col text-base pl-8"
+              ? "flex flex-col text-base pl-4 whitespace-nowrap overflow-hidden sm:pl-8"
+              : "flex flex-col text-base pl-4 sm:pl-8"
           }
         >
           <div>
@@ -238,8 +238,8 @@ function Contacts({ isActive }) {
         <div
           className={
             isActive
-              ? "flex flex-col text-base pl-8 whitespace-nowrap overflow-hidden"
-              : "flex flex-col text-base pl-8"
+              ? "flex flex-col text-base pl-4 whitespace-nowrap overflow-hidden sm:pl-8"
+              : "flex flex-col text-base pl-4 sm:pl-8"
           }
         >
           <div>html: </div>

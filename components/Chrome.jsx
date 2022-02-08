@@ -85,7 +85,7 @@ function Chrome() {
       <div className="flex justify-center font-desktop font-bold text-4xl relative top-32 object-contain sm:text-6xl text-white">
         My projects:
       </div>
-      <div className="fixed bottom-[0.2rem] right-0 z-50">
+      <div className="fixed bottom-[0.2rem] right-0 z-50 pointer-events-none">
         <Image src={sasukenaruto} width={374} height={225} objectFit="contain" />
       </div>
     </div>
