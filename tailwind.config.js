@@ -13,13 +13,17 @@ module.exports = {
       },
       scale: {
         '130': '1.30',
-      }
+      },
+      screens: {
+        'semi-lg': '1215px',
+      },
     },
     fontFamily: {
       "desktop": ['Source Code Pro', 'monospace']
     },
   },
   plugins: [
-    require('tailwind-scrollbar-hide')
-  ]
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/line-clamp'),
+  ],
 }
